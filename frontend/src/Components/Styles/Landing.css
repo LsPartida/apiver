@@ -1,0 +1,15 @@
+#Barcode, #Barcode:focus{
+    border:none;
+    outline:none;
+    background-color:black;
+    color: chartreuse;
+}
+#elH1{
+    color:azure;
+}
+#descripcion{
+    color: gold;
+}
+#precio{
+    color:white;
+}

@@ -1,0 +1,29 @@
+0) Revisar licencia
+1) Buscar precio desde el server en gpuntoventa
+    get idpuntoventa
+    revisar precio en punto venta
+2) Obtener sucursal del equipo para revisar si aplica la promo
+3) Asignar precio1 y descuento
+    Precio1 = $" pespecial(au.PRECIO1,0,au.IDUNIDAD,a.LINEA01,a.IDARTICULO,auc.CODIGOBARRAS,{mdlPublicos.CurrentSucID}) PRECIO1 ";
+    Descuen = $" despecial( au.PRECIO1,0,au.IDUNIDAD,a.LINEA01,a.IDARTICULO,auc.CODIGOBARRAS,{mdlPublicos.CurrentSucID}) DESCUENTO ";
+4) hacer consulta de los datos y regresarlos
+sSql = `SELECT IDARTICULO,${precio},DESCRIPCION FROM garticulos a INNER JOIN garticulosunidades au USING(IDARTICULO) INNER JOIN garticulosunidadescodigos auc USING(IDARTICULO,IDUNIDAD) WHERE auc.CODIGOBARRAS='${barcode}'`;
+
+-Angelica / Super surtidor-
+-Amalia Laguna-
+-Kenia-
+Keni-.04@hotmail.com
+-Ixtlahuacan-
+
+
+
+buscar aperturas canceladas del 13 del traspaso 2 
+"apertura" salida >0
+
+SELECT a.IDKARDEXPROD,a.CONCEPTO,a.FECHAMOV
+FROM
+(SELECT IDKARDEXPROD,IDARTICULO,CONCEPTO,FECHAMOV FROM garticuloskardex WHERE CONCEPTO LIKE '%APertura%' AND FECHAMOV>=DATE('2019-12-18')) a
+INNER JOIN
+(SELECT IDKARDEXPROD,IDARTICULO,CONCEPTO FROM garticuloskardex WHERE CONCEPTO LIKE '%apertura%cancelakarmov%' AND FECHAMOV>=date('2019-12-14')) b USING (IDARTICULO)
+INNER JOIN 
+galmacentraspasosdetalle USING(IDARTICULO) WHERE IDALMACENTRASPASODET=2;
