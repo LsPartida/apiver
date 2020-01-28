@@ -1,15 +1,28 @@
-#Barcode, #Barcode:focus{
-    border:none;
-    outline:none;
-    background-color:black;
-    color: chartreuse;
+.Barcode:-webkit-autofill,
+.Barcode:-webkit-autofill:hover,
+.Barcode:-webkit-autofill:focus,
+.Barcode,
+.Barcode:focus {
+  border: none;
+  outline: none;
+  background-color: black;
+  color: chartreuse;
 }
-#elH1{
-    color:azure;
+.descuento {
+  color: rgb(189, 252, 231);
 }
-#descripcion{
-    color: gold;
+.elH1 {
+  color: azure;
 }
-#precio{
-    color:white;
+.descripcion {
+  color: gold;
+}
+.precio {
+  color: white;
+}
+.oferta{
+  color:white;
+}
+.resultados{
+  color:lightslategray;
 }
